@@ -1,7 +1,6 @@
 
 /* ИНСТРУКЦИИ ДЛЯ GULP */
 
-
 /* пути к папкам, чтобы галп видел куда ему заходить */
 
 const project_folder = 'prod'; // базовый прод
@@ -44,15 +43,13 @@ var {src, dest} = require('gulp'),
     gulpfileinclude = require('gulp-file-include'),  // для добавления импортов в html
     del = require('del'), //для удаления ненужного файла на prod
     pugcompiler = require('gulp-pug'), 
-    sasscompiler = require('sass'),
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     plumber = require('gulp-plumber'),
-    compressSvg = require('gulp-svgmin');
-    
-
+    compressSvg = require('gulp-svgmin'),
+    sass = require('sass');
 
 
 
@@ -92,17 +89,13 @@ function PugToHtml(){
 
 }
 
-
-//функция для перевода sass в css ДОРАБОТАТЬ
+// функция для передачи css в prod
 function SassToCss(){
     return gulp.src(path.src.sass)
-
       .pipe(browsersync.stream())
-      .pipe(plumber())
-      .pipe(concat('style.css'))
+      .pipe(src('src/sass/*.css'))
       .pipe(dest(path.build.css))
   }
-
 
 //функция для удаления ненужных файлов в dist(prod)
 function clean(params){
@@ -136,8 +129,8 @@ function compressImages(){
 function watchFiles(){
     gulp.watch([path.watch.html],html),
     gulp.watch([path.watch.pug], PugToHtml),
-    gulp.watch([path.watch.sass], SassToCss),
     gulp.watch([path.watch.js], compressJs),
+    gulp.watch([path.watch.sass], SassToCss),
     gulp.watch([path.watch.img], compressImages);
    
 }
@@ -158,7 +151,6 @@ var watch = gulp.parallel(build,
 
 //передаем галпу, что ему делать при вызове в терминале
 exports.html = html;
-exports.sass = SassToCss;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

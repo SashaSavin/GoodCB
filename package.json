@@ -13,6 +13,7 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "browser-sync": "^2.26.13",
+    "dart-sass": "^1.25.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
