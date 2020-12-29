@@ -17,17 +17,19 @@ const path = {
     src: {
         html: [source_folder  + '/*.html', '!' + source_folder  + '/_*.html'], //галп игнорит файлы с префиксом во втором случае
         pug: source_folder + '/pug/*.pug', 
+        css: source_folder + '/sass/*.css',
         sass: source_folder  + '/sass/styles.sass',
         js:  source_folder + '/js/*.js',
-        img: source_folder  + '/img/**/*.{jpg, png, svg, gif, ico, webp}',
+        img: 'src/img/*.png',
         fonts: source_folder  + '/fonts/*.ttf'
     },
     watch: {
         html: source_folder  + '/**/*.html',
         sass: source_folder  + '/sass/*.sass',
+        css: '/sass/*.css',
         pug: source_folder + '/pug/*.pug', 
         js:  source_folder + '/js/*.js',
-        img: source_folder  + '/img/**/*.{jpg, png, svg, gif, ico, webp}',
+        img: 'src/img/*.png',
         fonts: source_folder  + '/fonts/*.ttf'
     },
     clean: "./" + project_folder + "/"
@@ -43,13 +45,7 @@ var {src, dest} = require('gulp'),
     gulpfileinclude = require('gulp-file-include'),  // для добавления импортов в html
     del = require('del'), //для удаления ненужного файла на prod
     pugcompiler = require('gulp-pug'), 
-    babel = require('gulp-babel'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    imagemin = require('gulp-imagemin'),
-    plumber = require('gulp-plumber'),
-    compressSvg = require('gulp-svgmin'),
-    sass = require('sass');
+    sass = require('gulp-dart-sass');
 
 
 
@@ -59,7 +55,7 @@ var {src, dest} = require('gulp'),
 function reload(params) {
     browsersync.init({
         server:{
-            baseDir: "./"+ project_folder + "/"
+            baseDir: "./"+ source_folder + "/"
         },
         port: 3000,
         open: true,
@@ -93,35 +89,30 @@ function PugToHtml(){
 function SassToCss(){
     return gulp.src(path.src.sass)
       .pipe(browsersync.stream())
-      .pipe(src('src/sass/*.css'))
+      .pipe(sass().on('error', sass.logError))
       .pipe(dest(path.build.css))
+      .pipe(dest('./src/css'))
+     
   }
+
+
+//Передачи картинок в прод
+function imgToProd(){
+    return src(path.src.img)
+     .pipe(browsersync.stream())
+     .pipe(gulp.dest(path.build.img))
+}
+
+//Передача шрифтов
+function FontsToProd(){
+    return src(path.src.fonts)
+    .pipe(dest(path.build.fonts))
+}
 
 //функция для удаления ненужных файлов в dist(prod)
 function clean(params){
     return del(clean)
 }
-
-//функция для сжатия js
-function compressJs(){
-    return gulp.src(path.src.js)
-        .pipe(babel({
-            presets: ['@babel/env']
-          }))
-        .pipe(plumber())
-        .pipe(browsersync.stream())
-        .pipe(uglify())
-        .pipe(concat('main.min.js'))
-        .pipe(gulp.dest(path.build.js))
-}
-
-//Функция для сжатия картинок
-function compressImages(){
-    return gulp.src(path.src.img)
-      .pipe(imagemin())
-      .pipe(compressSvg())
-      .pipe(gulp.dest(path.build.img))
-  }
 
 
 
@@ -129,9 +120,9 @@ function compressImages(){
 function watchFiles(){
     gulp.watch([path.watch.html],html),
     gulp.watch([path.watch.pug], PugToHtml),
-    gulp.watch([path.watch.js], compressJs),
     gulp.watch([path.watch.sass], SassToCss),
-    gulp.watch([path.watch.img], compressImages);
+    gulp.watch([path.watch.img], imgToProd),
+    gulp.watch([path.watch.fonts], FontsToProd);
    
 }
 
@@ -143,13 +134,14 @@ var watch = gulp.parallel(build,
                         watchFiles,
                         PugToHtml,
                         SassToCss,
-                        compressJs,
                         reload,
-                        compressImages)
+                        imgToProd,
+                        FontsToProd)
 
 /* команды для gulp */
 
 //передаем галпу, что ему делать при вызове в терминале
+
 exports.html = html;
 exports.build = build;
 exports.watch = watch;

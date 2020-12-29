@@ -1,0 +1,71 @@
+.main
+ position: relative
+ padding-top: 65px
+ padding-bottom: 60px
+ background: #373737 url(../img/main/main-background.png) center no-repeat
+ color: $text-color-light
+ z-index: 1
+ background-size: cover
+ &::before
+  content: ''
+  display: block
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: 0
+
+.main-img
+   position: relative
+
+   &::before
+    content: ''
+    position: absolute
+    z-index: -1
+    width: 390px
+    height: 390px
+    left: 50%
+    margin-left: -195px
+    border: 1px solid #ffffff
+    border-radius: 50%
+
+
+
+.main-title__title
+ margin-bottom: 20px
+ font-size: 41px
+ font-weight: 700
+
+.main-text__subtitle
+ font-size: 28px
+ font-weight: 300
+ margin-bottom: 27px
+ 
+.main-text__form
+ padding: 30px 27px
+ background-color: rgba(255, 255, 255, 0.3) //сразу задается прозрачность
+
+
+.form
+ display: flex
+ margin-bottom: 12px
+ &-title
+  padding-right: 87px
+  font-size: 20px
+  font-weight: 30
+  padding-bottom: 20px
+  &__important
+   font-weight: 700
+   text-transform: uppercase
+   line-height: 30px
+ &__input
+  margin-right: 10px
+  padding: 20px
+  border-radius: 4px 
+  border: none
+  flex-basis: 50%
+ &__small
+   font-size: 14px
+   font-weight: 300
