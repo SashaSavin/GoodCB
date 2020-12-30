@@ -262,6 +262,10 @@ body {
   margin-right: 10px;
 }
 
+.products-block__img-corrected {
+  max-height: 300px;
+}
+
 .clients {
   margin-top: 60px;
 }
