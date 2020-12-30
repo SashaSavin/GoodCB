@@ -1,0 +1,48 @@
+.features
+ background-color: $bg-color-light
+ padding-top: 49px
+ padding-bottom: 55px
+ &-blocks
+  /* позиционирование на flex */
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+ &-block
+  display: flex
+  align-items: center
+  flex-basis: 31%
+  background-color: #fff
+  padding: 28px 19px
+  margin-bottom: 30px
+  &__img
+   flex-basis: 40%
+   margin-right: 9px
+  &__title
+    font-size: 15px
+    font-weight: 700
+    margin-bottom: 7px
+  &__descr
+     font-size: 14px
+     font-weight: 400
+
+
+.numbers
+ margin-bottom: 37px
+ text-align: center
+ &-block
+  /* пример выравнивания на блоках
+      если между элементами есть пустоты */
+  display: inline-block
+  width: 30%
+  vertical-align: top
+  &__title
+    margin-bottom: 10px
+    font-size: 36px
+    font-weight: 900
+    color: $active-color
+    sup
+     font-size: 18px
+  &__text
+     font-size: 16px
+     font-weight: 300
+    

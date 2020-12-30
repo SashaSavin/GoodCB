@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto-Black", sans-serif;
 }
@@ -22,18 +23,44 @@ body {
   margin-right: 13px;
 }
 
+.section-title {
+  font-size: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 29px;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  margin-top: 12px;
+  height: 6px;
+  background: url(/img/wave.png) center no-repeat;
+}
+
 .button {
   font-size: 14px;
   font-weight: 400;
   color: #ffffff;
-  border: none;
-  background-color: #fdb953;
+  border: 1px solid transparent;
+  background-color: #f0ad49;
   padding: 13px 22px;
   border-radius: 5px;
   margin-left: 10px;
 }
 .button:hover {
-  background-color: #fdc36c;
+  background-color: #f2b861;
+  cursor: pointer;
+}
+.button-o {
+  background-color: transparent;
+  color: #373737;
+  border: 1px solid rgba(55, 55, 55, 0.5);
+}
+.button:hover {
+  background-color: #f2b861;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 .button img {
   width: 20px;
@@ -57,7 +84,7 @@ body {
 
 .overlay {
   position: fixed;
-  display: block;
+  display: none;
   top: 0;
   width: 100%;
   height: 100%;
@@ -69,16 +96,173 @@ body {
   position: fixed;
   left: 50%;
   width: 752px;
-  top: 100px;
+  top: 120px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-color: #fff;
 }
 
 .popup-close {
   position: absolute;
   font-size: 35px;
-  color: fff;
+  color: white;
+  right: -20px;
+  top: -30px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.popup-title {
+  display: block;
+  width: 100%;
+  height: 71px;
+  background-color: #ff9d00;
+  color: white;
+  text-transform: uppercase;
+  font-size: 21px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 71px;
+}
+
+.popup-form {
+  background: url(/img/popup/popup_bckgr.jpg) center no-repeat;
+  background-size: cover;
+  padding: 35px 88px 50px 88px;
+  color: white;
+}
+
+.popup-form-header {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+}
+.popup-form-header span {
+  font-size: 24px;
+  display: block;
+  padding-top: 15px;
+}
+
+.popup-form__label {
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 23px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.popup-form__input {
+  width: 365px;
+  height: 56px;
+  margin-top: 17px;
+}
+
+.popup-form__btn {
+  width: 180px;
+  height: 56px;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+
+.popup-form__note {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 9px;
+}
+
+.features {
+  background-color: #eeeeee;
+  padding-top: 49px;
+  padding-bottom: 55px;
+}
+.features-blocks {
+  /* позиционирование на flex */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.features-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+  background-color: #fff;
+  padding: 28px 19px;
+  margin-bottom: 30px;
+}
+.features-block__img {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-right: 9px;
+}
+.features-block__title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.features-block__descr {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.numbers {
+  margin-bottom: 37px;
+  text-align: center;
+}
+.numbers-block {
+  /* пример выравнивания на блоках
+  *  если между элементами есть пустоты */
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+.numbers-block__title {
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 900;
+  color: #f0ad49;
+}
+.numbers-block__title sup {
+  font-size: 18px;
+}
+.numbers-block__text {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.products {
+  padding-top: 57px;
+  padding-bottom: 73px;
+}
+.products-block {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.products-block__img {
+  margin-bottom: 19px;
+}
+.products-block__title {
+  margin-bottom: 28px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.products-block__buttons {
+  margin-right: 10px;
 }
 
 @font-face {
