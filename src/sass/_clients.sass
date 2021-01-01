@@ -4,6 +4,15 @@
   &-block__img
    padding-left: 32px
    padding-right: 32px
+   transition: filter .7s ease-in-out
+   -webkit-filter: grayscale(99%)
+    filter: grayscale(99%)
+
+   &:hover
+    -webkit-filter: grayscale(0%)
+    filter: grayscale(0%)
+    
+    
 
 .client-block__wrapper
  display: flex

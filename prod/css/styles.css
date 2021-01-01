@@ -292,6 +292,13 @@ body {
 .clients-block__img {
   padding-left: 32px;
   padding-right: 32px;
+  transition: filter 0.7s ease-in-out;
+  -webkit-filter: grayscale(99%);
+  -webkit-filter-filter: grayscale(99%);
+}
+.clients-block__img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .client-block__wrapper {
@@ -406,13 +413,9 @@ input:focus, button:focus {
   height: 377px;
   overflow-y: hidden;
 }
-.production-slider_bottom {
-  padding-right: 30px;
-  height: 78px;
-  overflow-y: hidden;
-}
 .production-slider img {
   margin: 0 6px;
+  width: 377px;
 }
 .production-text {
   color: #373737;
