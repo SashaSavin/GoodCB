@@ -9,13 +9,12 @@
 
     <title>Good Cardboard</title>
 
-    <!-- BOOTSTRAP GRID CSS -->
+    <!-- BOOTSTRAP GRID, MIN CSS -->
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
     <!-- ANIMATE CSS -->
     <link rel="stylesheet" href="./css/animate.css">
     <!-- BASE STYLES -->
@@ -49,21 +48,23 @@
     <header class="header">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-4">
+                <div class="col-3 col-md-4">
                     <div class="header-logo">
-                        <img src="./img/header_logo.png" alt="">
+                     
                     </div>
                     <!-- /.header__logo -->
                 </div>
                 <!-- /.col-4 -->
-                <div class="col-8">
+                <div class="col-9 col-md-8">
                     <div class="header-contacts">
-                        <div class="header-contacts__phone">8 (347) 271-54-28</div>
-                        <p class="header-contacts__seporator">|</p>
-                        <div class="header-contacts__phone">8 (937) 363-30-00</div>
+                        <div class="header-contacts__phones">
+                            <div class="header-contacts__phone">8 (347) 271-54-28</div>
+                            <p class="header-contacts__seporator">|</p>
+                            <div class="header-contacts__phone">8 (937) 363-30-00</div>
+                       </div>
                         <button class="header-contacts__button button">
                             <img src="./img/phone.png" class="call" alt="">
-                            Заказать звонок
+                            <span class="hidden-mobile">Заказать звонок</span>
                         </button>
                     </div>
                     <!-- /.header__contacts -->
@@ -79,13 +80,13 @@
     <section class="main dark-bg" id="main">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-5">
-                    <div class="main-img animate">
+                <div class="col-12 col-md-5">
+                    <div class="main-img wow animate bounceIn hidden-mobile">
                         <img src="./img/main/main-boxes.png" alt="">
                     </div>
                 </div>
                 <!-- /.col-5 -->
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <div class="main-text">
                         <h1 class="main-title__title">Производство упаковки из гофрокартона
                         </h1>
@@ -287,7 +288,7 @@
 
             <div class="row align-items-center">
 
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="products-block">
                         <img class="products-block__img" src="./img/boxes/box1.jpg" alt="">
                         <div class="products-block__title">Гофрокороб 4-х клапанный</div>
@@ -304,7 +305,7 @@
                 </div>
                 <!-- /.col-6 -->
 
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="products-block">
                         <img class="products-block__img" src="./img/boxes/subbox.jpg" alt="">
                         <div class="products-block__title">Гофролоток</div>
@@ -318,7 +319,7 @@
                 </div>
                 <!-- /.col-6 -->
 
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="products-block">
                         <img class="products-block__img" src="./img/boxes/subbox2.jpg" alt="">
                         <div class="products-block__title">Гофрокороб самосборный (сложная высечка)</div>
@@ -334,7 +335,7 @@
                 <!-- /.col-6 -->
 
 
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="products-block">
                         <img class="products-block__img-corrected" src="./img/boxes/paper.jpg" alt="">
                         <div class="products-block__title">Листовой гофрокартон</div>
@@ -378,7 +379,7 @@
     <section class="production" id="production">
         <div class="container">
             <div class="row">
-                <div class="col-7">
+                <div class="col-12 col-lg-5 order-last order-lg-first">
                     <div class="production-slider">
                         <div class="production-slider_top">
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -417,7 +418,7 @@
 
 
 
-                <div class="col-5">
+                <div class="col-12 col-lg-7 order-first order-lg-last">
                     <div class="production-text">
                         <div class="production-text__title">Производство</div>
                         <!-- /.production-text__title -->
@@ -442,11 +443,11 @@
 
     <section class="clients" id="clients">
         <div class="container">
-            <div class="section-title wow animate fadeOutUp">Наши клиенты</div>
+            <div class="section-title client_title wow animate fadeOutUp">Наши клиенты</div>
             <!-- /.clients-block__title -->
             <div class="row justify-content-center">
 
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <div class="client-block">
                         <div class="client-block__wrapper"> <img src="./img/clients/voshod_1.png" alt=""
                                 class="clients-block__img"></div>
@@ -458,7 +459,7 @@
                 </div>
                 <!-- /.col-3 -->
 
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <div class="clients-block">
                         <div class="client-block__wrapper"><img src="./img/clients/streh_2.png" alt=""
                                 class="clients-block__img"></div>
@@ -469,7 +470,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <div class="clients-block">
 
                         <div class="client-block__wrapper"><img src="./img/clients/sersneg_3.png" alt=""
@@ -483,7 +484,7 @@
 
 
                 <!-- /.col-3 -->
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <div class="clients-block">
 
                         <div class="client-block__wrapper"><img src="./img/clients/avada_4.png" alt=""
