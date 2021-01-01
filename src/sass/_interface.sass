@@ -24,6 +24,11 @@
   padding: 13px 22px
   border-radius: 5px
   margin-left: 10px
+  & >.call
+   animation: flash
+
+   animation-duration: 2s
+
   &:hover
    background-color: lighten($active-color, 5)
    cursor: pointer
@@ -51,3 +56,17 @@
   padding-bottom: 20px
   vertical-align: middle
   width: 30%
+
+.dark-bg
+ position: relative
+ z-index: 2
+ &::before
+  content: ''
+  display: block
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: -1

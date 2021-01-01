@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "animate.css": "^4.1.1",
     "browser-sync": "^2.26.13",
     "dart-sass": "^1.25.0",
     "del": "^6.0.0",
@@ -28,6 +29,7 @@
     "gulp-uglify": "^3.0.2",
     "node-sass": "^5.0.0",
     "pug": "^2.0.4",
-    "sass": "^1.30.0"
+    "sass": "^1.30.0",
+    "wow.js": "^1.2.2"
   }
 }

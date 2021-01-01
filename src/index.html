@@ -16,14 +16,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/animate.css">
     <!-- BASE STYLES -->
     <link rel="stylesheet" href="./css/styles.css">
 
-
+  
 </head>
 
 <body>
+
+    <div class="pre-header">
+        <div class="container">
+            <div class="pre-header__text">
+                <a class="text-element" href="#">О КОМПАНИИ</a>
+                <a class="text-element" href="#features">ПРЕИМУЩЕСТВА</a>
+                <a class="text-element" href="#main">ПРОИЗВОДСТВО</a>
+                <a class="text-element" href="#">СКЛАД</a>
+                <a class="text-element" href="#products">ПРОДУКЦИЯ</a>
+                <a class="text-element" href="#clients">НАШИ КЛИЕНТЫ</a>
+                <a class="text-element" href="#">СЕРТИФИКАТЫ</a>
+                <a class="text-element" href="#">ОТЗЫВЫ</a>
+                <a  href="#">КОНТАКТЫ</a>
+            </div>
+            <!-- /.pre-header__text -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.pre-header -->
+
 
     <header class="header">
         <div class="container">
@@ -41,7 +61,7 @@
                         <p class="header-contacts__seporator">|</p>
                         <div class="header-contacts__phone">8 (937) 363-30-00</div>
                         <button class="header-contacts__button button">
-                            <img src="./img/phone.png" alt="">
+                            <img src="./img/phone.png" class="call" alt="">
                             Заказать звонок
                         </button>
                     </div>
@@ -55,7 +75,7 @@
     </header>
     <!-- /.header -->
 
-    <section class="main">
+    <section class="main dark-bg" id="main">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-5">
@@ -110,7 +130,7 @@
                     <label for="phone" class="popup-form__label" '>
                         Введите ваш номер телефона:
                     </label>
-                    <input type="tel" class="popup-form__input" name =' phone' placeholder='+375(xx) xxx xx xx'
+                    <input type="tel" class="popup-form__input" name =' phone' placeholder='+375(XX) XXX-XX-XX'
                         required>
                         <button class="button popup-form__btn">Оставить заявку!</button>
                         <div class="popup-form__note">*Минимальный заказ 500шт</div>
@@ -122,11 +142,11 @@
     </div>
     <!-- /.overlay -->
 
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <div class="numbers">
-                <div class="numbers-block">
-                    <div class="numbers-block__title">5 лет</div>
+                <div class="numbers-block ">
+                    <div class="numbers-block__title wow animate fadeInUp" data-wow-delay="0.1s">5 лет</div>
                     <!-- /.number-block__title -->
                     <div class="numbers-block__text">На рынке изделий из гофрокартона</div>
                     <!-- /.numbers-block__text -->
@@ -134,7 +154,8 @@
                 <!-- /.numbers-block -->
 
                 <div class="numbers-block">
-                    <div class="numbers-block__title">до 5 000 000 м<sup>2</sup></div>
+                    <div class="numbers-block__title wow animate fadeInUp" data-wow-delay="0.2s">до 5 000 000
+                        м<sup>2</sup></div>
                     <!-- /.number-block__title -->
                     <div class="numbers-block__text">Ежемесячный объем производства гофрокартона</div>
                     <!-- /.numbers-block__text -->
@@ -143,7 +164,8 @@
 
 
                 <div class="numbers-block">
-                    <div class="numbers-block__title">4 000 м<sup>2</sup></div>
+                    <div class="numbers-block__title wow animate fadeInUp" data-wow-delay="0.3s">4 000 м<sup>2</sup>
+                    </div>
                     <!-- /.number-block__title -->
                     <div class="numbers-block__text">Площадь склада</div>
                     <!-- /.numbers-block__text -->
@@ -233,7 +255,7 @@
                 </div>
 
                 <!-- /.features-block -->
-                <div class="features-block">
+                <div class="features-block" data-wow-delay="0.6s">
                     <div class="features-block__img">
                         <img src="./img/features/cardboard5.png" alt="Добавки">
                     </div>
@@ -257,9 +279,9 @@
     </section>
     <!-- /.features -->
 
-    <section class="products">
+    <section class="products" id="products">
         <div class="container">
-            <h2 class="section-title">наша Продукция</h2>
+            <h2 class="section-title wow animate fadeInOut">наша Продукция</h2>
             <!-- /.section-title -->
 
             <div class="row align-items-center">
@@ -313,7 +335,7 @@
 
                 <div class="col-6">
                     <div class="products-block">
-                        <img class="products-block__img-corrected" src="./img/boxes/paper.jpg" alt="" >
+                        <img class="products-block__img-corrected" src="./img/boxes/paper.jpg" alt="">
                         <div class="products-block__title">Листовой гофрокартон</div>
                         <!-- /.products-block__title -->
                         <div class="products-block__buttons">
@@ -333,10 +355,74 @@
     </section>
     <!-- /.products -->
 
-
-    <section class="clients">
+    <section class="offer dark-bg" id="offer">
         <div class="container">
-            <div class="section-title">Наши клиенты</div>
+            <h2 class="offer-title">Получите индивидуальное предложение
+                <span class="offer-title_small"> на производство и поставку изделий</span></h2>
+            <!-- /.offer-title -->
+            <div class="offer-form">
+                <form action="#">
+                    <label class="offer-form__label" for="">Введите ваш номер телефона:</label>
+                    <input class="form__input offer-from__input" type="tel" placeholder="+375(XX)XXX-XX-XX"><br>
+                    <button class="button offer-form__button" type="submit">Оставить заявку!</button>
+                </form>
+                <small class="form-small">*Минимальный заказ 500шт</small>
+            </div>
+            <!-- /.offer-form -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.offer -->
+
+    <section class="production" id="production">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <div class="production-slider">
+                        <div class="production-slider_top">
+                            <img src="./img/production/prod_1.png" alt="">
+
+                        </div>
+                        <!-- /.production-slider_top -->
+                        <div class="production-slider_bottom owl-carousel">
+                            <img class="production-slider__elem" src="./img/production/prod_1.png" alt="">
+                            <img src="./img/production/img_2.png" alt="">
+                            <img src="./img/production/img_3.png" alt="">
+                            <img src="./img/production/img_4.png" alt="">
+                            <img src="./img/production/prod_1.png" alt="">
+                            <img src="./img/production/img_3.png" alt="">
+                        </div>
+                        <!-- /.production-slider_bottom -->
+                    </div>
+
+                </div>
+                <!-- /.col-7 -->
+
+                <div class="col-5">
+                    <div class="production-text">
+                        <div class="production-text__title">Производство</div>
+                        <!-- /.production-text__title -->
+                        <div class="production-text__descr">Современное оборудование позволяет производить
+                            до 5 миллионов квадратных метров гофрокартона ежемесячно.
+                            Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика.
+                            Досконально прорабатываем конструкции коробов и составы сырья,
+                            учитывая условия хранения, транспортировки и производства вашей продукции.
+                            Возможно нанесение цветной флексопечати на поверхность коробов.</div>
+                        <!-- /.production-text__descr -->
+                    </div>
+                    <!-- /.production-text -->
+                </div>
+                <!-- /.col-5 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.production -->
+
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-title wow animate fadeOutUp">Наши клиенты</div>
             <!-- /.clients-block__title -->
             <div class="row justify-content-center">
 
@@ -396,8 +482,6 @@
         </div>
         <!-- /.container -->
     </section>
-    <!-- /.clients -->
-
 
     <!-- Optional JavaScript  -->
 
@@ -406,10 +490,20 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <script src="./js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
+
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
     <script src="./js/script.js"></script>
+
+
+
 </body>
 
 </html>
