@@ -656,7 +656,8 @@ input:focus, button:focus {
     display: flex;
     flex-direction: row;
   }
-  .header-contacts__button .call {
+
+  .hidden-mobile {
     display: none;
   }
 
