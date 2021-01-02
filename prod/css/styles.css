@@ -624,4 +624,80 @@ input:focus, button:focus {
   .client-block__wrapper {
     width: auto;
   }
+
+  .products-block__img {
+    max-width: -webkit-fill-available;
+  }
+
+  .popup {
+    width: auto;
+  }
+  .popup-close {
+    padding-right: 18%;
+  }
+  .popup-form__input {
+    margin-bottom: 30px;
+    width: 300px;
+  }
+  .popup-form__btn {
+    margin-left: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .pre-header {
+    padding-bottom: 60px;
+  }
+
+  .header-contacts__phones {
+    width: 100%;
+  }
+
+  .header-contacts__button {
+    display: flex;
+    flex-direction: row;
+  }
+  .header-contacts__button .call {
+    display: none;
+  }
+
+  .main-title__title {
+    text-align: center;
+  }
+
+  .main-img {
+    padding-top: 25px;
+    margin-left: 170px;
+    padding-bottom: 30px;
+    width: 350px;
+  }
+  .main-img::before {
+    content: "";
+    border: none;
+  }
+
+  .main-text__subtitle {
+    margin-left: 150px;
+  }
+
+  .form-title {
+    text-align: center;
+  }
+
+  .numbers-block__title {
+    font-size: 25px;
+  }
+
+  .features-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production-text {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .clients {
+    display: none;
+  }
 }
