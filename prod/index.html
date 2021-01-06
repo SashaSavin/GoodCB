@@ -19,8 +19,9 @@
     <link rel="stylesheet" href="./css/animate.css">
     <!-- BASE STYLES -->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- YANDEX API-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 
-  
 </head>
 
 <body>
@@ -36,7 +37,7 @@
                 <a class="text-element" href="#clients">НАШИ КЛИЕНТЫ</a>
                 <a class="text-element" href="#">СЕРТИФИКАТЫ</a>
                 <a class="text-element" href="#">ОТЗЫВЫ</a>
-                <a  href="#">КОНТАКТЫ</a>
+                <a href="#">КОНТАКТЫ</a>
             </div>
             <!-- /.pre-header__text -->
         </div>
@@ -50,7 +51,7 @@
             <div class="row align-items-center">
                 <div class="col-3 col-md-4">
                     <div class="header-logo">
-                     
+
                     </div>
                     <!-- /.header__logo -->
                 </div>
@@ -61,7 +62,7 @@
                             <div class="header-contacts__phone">8 (347) 271-54-28</div>
                             <p class="header-contacts__seporator">|</p>
                             <div class="header-contacts__phone">8 (937) 363-30-00</div>
-                       </div>
+                        </div>
                         <button class="header-contacts__button button">
                             <img src="./img/phone.png" class="call" alt="">
                             <span class="hidden-mobile">Заказать звонок</span>
@@ -384,32 +385,34 @@
                         <div class="production-slider_top">
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img class="d-block w-100" src="./img/production/prod_1.png" alt="Первый слайд">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="d-block w-100" src="./img/production/img-2.png" alt="Второй слайд">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="d-block w-100" src="./img/production/img-3.png" alt="Третий слайд">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="d-block w-100" src="./img/production/img-4.png" alt="Третий слайд">
-                                  </div>
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="./img/production/prod_1.png" alt="Первый слайд">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="./img/production/img-2.png" alt="Второй слайд">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="./img/production/img-3.png" alt="Третий слайд">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="./img/production/img-4.png" alt="Третий слайд">
+                                    </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                    data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
-                                  </a>
-                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                    data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
-                                  </a>
-                              </div>
+                                </a>
+                            </div>
 
                         </div>
                         <!-- /.production-slider_top -->
-        
+
                     </div>
 
                 </div>
@@ -504,6 +507,57 @@
         <!-- /.container -->
     </section>
 
+    <section class="feedback">
+        <div class="container">
+            <div class="section-title">
+                Отзывы о сотрудничестве
+            </div>
+            <!-- /.section-title -->
+            <div class="feedback-items">
+                <img src="./img/feedback/feed1.png" alt="" class="feedback-item">
+                <img src="./img/feedback/feed2.png" alt="" class="feedback-item">
+                <img src="./img/feedback/feed3.png" alt="" class="feedback-item">
+            </div>
+            <!-- /.feedback-slider -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.feedback -->
+
+    <section class="contacts">
+        <div id="map" class="map"></div>
+        
+        <div class="contacts-block">
+            <div class="contact-block__address  contacts-block-text ">
+                <span class="contacts-block__title"> Адрес офиса</span>
+                г. Уфа, Проспект октября, 46
+                <span class="contacts-block__title"> Адрес склада</span>
+                г. Уфа, ул. Майкопская, 65/2
+            </div> <!-- /.contact-block__address -->
+
+            <div class="contact-block__phone contacts-block-text">
+                <span class="contacts-block__title"> Тел. отдела продаж:</span>
+                8 (347) 271-54-28<br>
+                8 (937) 363-30-00
+            </div> <!-- /.contact-block__phone -->
+            <div class="contacts-block__cta contacts-block-text">
+                <button class="button">Заказать звонок</button></div>
+            <div class="contacts-block__mail">
+                <span class="contacts-block__title"> Е-mail</span>
+                    urals.karton@gmail.com
+                </div> <!-- /.contact-block__phone -->
+        </div>
+        
+
+    </section>
+    <!-- /.contacts -->
+
+
+    <section class="footer">
+        <div class="footer-text">© www.gofra-ural.ru 2021, все права защищены</div>
+    </section>
+    <!-- /.footer -->
+
     <!-- Optional JavaScript  -->
 
 
@@ -517,7 +571,7 @@
     </script>
 
 
-   
+
 
     <script src="./js/wow.min.js"></script>
     <script>
@@ -527,7 +581,42 @@
     <script src="./js/script.js"></script>
 
 
+    <script>
 
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [54.752656, 56.002053],
+            zoom: 18
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Мы здесь!'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/maps.png',
+            // Размеры метки.
+            iconImageSize: [40, 25],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-40, -25]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark);
+        
+});
+    </script>
 </body>
 
 </html>

@@ -452,6 +452,63 @@ input:focus, button:focus {
   line-height: 24px;
 }
 
+.feedback {
+  background-color: #eeeeee;
+  padding-top: 30px;
+}
+
+.feedback-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-item {
+  width: 300px;
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+
+.contacts {
+  position: relative;
+}
+.contacts-block {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  bottom: 10%;
+  background-color: #fff;
+  padding-top: 33px;
+  padding-bottom: 39px;
+  padding-left: 62px;
+  padding-right: 34px;
+}
+.contacts-block__title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+.contacts-block__text {
+  margin-bottom: 30px;
+}
+
+.map {
+  width: 100%;
+  height: 550px;
+}
+
+.footer {
+  background-color: #373737;
+  color: #eeeeee;
+  height: 44px;
+  text-align: center;
+  padding-top: 7px;
+}
+
 .main {
   padding-top: 65px;
   padding-bottom: 60px;
