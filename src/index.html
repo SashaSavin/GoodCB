@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="./css/styles.css">
     <!-- YANDEX API-->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <!-- METRIC -->
+
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(71015323, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/71015323" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
 </head>
 
@@ -130,12 +133,12 @@
                         Получите индивидуальное предложение
                         <span>на производство и поставку изделий</span>
                     </div>
-                    <label for="phone" class="popup-form__label" '>
+                    <label for="phone" class="popup-form__label" >
                         Введите ваш номер телефона:
                     </label>
                     <input type="tel" class="popup-form__input" name =' phone' placeholder='+375(XX) XXX-XX-XX'
                         required>
-                        <button class="button popup-form__btn">Оставить заявку!</button>
+                        <button onclick="yaCounter71015323.reachGoal(topBtn); return true" class="button popup-form__btn">Оставить заявку!</button>
                         <div class="popup-form__note">*Минимальный заказ 500шт</div>
                 </form>
             </div>
