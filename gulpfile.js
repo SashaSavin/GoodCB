@@ -30,6 +30,7 @@ const path = {
         pug: source_folder + '/pug/*.pug', 
         js:  source_folder + '/js/*.js',
         img: 'src/img/*.png',
+        jpg: 'src/img/*.jpg',
         fonts: source_folder  + '/fonts/*.ttf'
     },
     clean: "./" + project_folder + "/"
@@ -45,7 +46,9 @@ var {src, dest} = require('gulp'),
     gulpfileinclude = require('gulp-file-include'),  // для добавления импортов в html
     del = require('del'), //для удаления ненужного файла на prod
     pugcompiler = require('gulp-pug'), 
-    sass = require('gulp-dart-sass');
+    sass = require('gulp-dart-sass'),
+    webp = require('gulp-webp'),
+    imagemin = require('gulp-imagemin');
 
 
 
@@ -98,9 +101,9 @@ function SassToCss(){
 
 //Передачи картинок в прод
 function imgToProd(){
-    return src(path.src.img)
-     .pipe(browsersync.stream())
-     .pipe(gulp.dest(path.build.img))
+    return src('src/img/popup/*')
+     .pipe(imagemin())
+     .pipe(gulp.dest('./prod/img/popup'))
 }
 
 //Передача шрифтов
@@ -114,6 +117,12 @@ function clean(params){
     return del(clean)
 }
 
+//конверция png to webp
+function PngToWebP(){
+    return src('src/img/production/*')
+    .pipe(webp())
+    .pipe(gulp.dest('prod/img/offer'))
+}
 
 
 //функция для слежки за изменениями([указывать куда следить] что делать)
@@ -122,7 +131,8 @@ function watchFiles(){
     gulp.watch([path.watch.pug], PugToHtml),
     gulp.watch([path.watch.sass], SassToCss),
     gulp.watch([path.watch.img], imgToProd),
-    gulp.watch([path.watch.fonts], FontsToProd);
+    gulp.watch([path.watch.fonts], FontsToProd),
+    gulp.watch([path.watch.img], PngToWebP);
    
 }
 
@@ -136,7 +146,8 @@ var watch = gulp.parallel(build,
                         SassToCss,
                         reload,
                         imgToProd,
-                        FontsToProd)
+                        FontsToProd,
+                        PngToWebP)
 
 /* команды для gulp */
 

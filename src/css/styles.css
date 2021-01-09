@@ -8,7 +8,7 @@ body {
   padding: 15px 0;
 }
 .header-logo {
-  background: url(../img/header-logo.png) center no-repeat;
+  background: url(/img/advanced/header-logo.png) center no-repeat;
   background-size: 100%;
   width: 191px;
   height: 61px;
@@ -55,7 +55,7 @@ body {
   display: block;
   margin-top: 12px;
   height: 6px;
-  background: url(/img/wave.png) center no-repeat;
+  background: url(/img/advanced/wave.png) center no-repeat;
 }
 
 .button {
@@ -580,7 +580,7 @@ input:focus, button:focus {
   }
 
   .header-logo {
-    background: #f0ad49 url(/img/header_logo_mobile.png) center no-repeat;
+    background: #f0ad49 url(/img/advanced/header_logo_mobile.png) center no-repeat;
     background-size: 100%;
     width: 35px;
     height: 35px;
