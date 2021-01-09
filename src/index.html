@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -20,10 +20,10 @@
     <!-- BASE STYLES -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- YANDEX API-->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;"></script>
     <!-- METRIC -->
-
-    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(71015323, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/71015323" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+     <script > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(71015323, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/71015323" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
 </head>
 
@@ -133,7 +133,7 @@
                         Получите индивидуальное предложение
                         <span>на производство и поставку изделий</span>
                     </div>
-                    <label for="phone" class="popup-form__label" >
+                    <label for="phone" class="popup-form__label" id="popup-form__label" >
                         Введите ваш номер телефона:
                     </label>
                     <input type="tel" class="popup-form__input" name =' phone' placeholder='+375(XX) XXX-XX-XX'
@@ -368,7 +368,7 @@
             <!-- /.offer-title -->
             <div class="offer-form">
                 <form action="#">
-                    <label class="offer-form__label" for="">Введите ваш номер телефона:</label>
+                    <label class="offer-form__label" for="" id="offer-form__label">Введите ваш номер телефона:</label>
                     <input class="form__input offer-from__input" type="tel" placeholder="+375(XX)XXX-XX-XX"><br>
                     <button class="button offer-form__button" type="submit">Оставить заявку!</button>
                 </form>

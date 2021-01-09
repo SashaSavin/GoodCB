@@ -323,10 +323,6 @@ body {
   margin-bottom: 30px;
 }
 
-@font-face {
-  font-family: Roboto-Black;
-  src: url("src/fonts/Roboto-Black.ttf");
-}
 body {
   margin: 0;
 }
@@ -735,6 +731,7 @@ input:focus, button:focus {
 
   .main-text__subtitle {
     margin-left: 150px;
+    display: contents;
   }
 
   .form-title {
